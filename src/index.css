@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@layer components {
+  .bg-image {
+    background-image: url(./assets/images/bg-image.jpg);
+    width: 100%;
+    height: 400px;
+  }
+}
+
+@theme {
+  --color-header: #15171b;
+  --color-section: #14161a;
+  --color-border: #4a4c4f;
+  --color-placeholder: #b8b9ba;
+  --color-button: #87ceeb;
+  --padding-a18: 18px;
+  --font-monserrat: "Monserrat", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./assets/fonts/montserrat-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  src: url("./assets/fonts/montserrat-500.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./assets//fonts/montserrat-700.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./assets/fonts/roboto-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  src: url("./assets/fonts/roboto-500.woff2") format("woff2");
+}
