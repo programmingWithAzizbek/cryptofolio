@@ -3,7 +3,8 @@
 @layer components {
   .bg-image {
     background-image: url(./assets/images/bg-image.jpg);
-    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 400px;
   }
 }
@@ -11,9 +12,14 @@
 @theme {
   --color-header: #15171b;
   --color-section: #14161a;
+  --color-div: #16171a;
   --color-border: #4a4c4f;
   --color-placeholder: #b8b9ba;
+  --color-hr: #515151;
+  --color-text: #a9a9a9;
   --color-button: #87ceeb;
+  --color-plus: #0ecb81;
+  --color-minus: #ff0000;
   --padding-a18: 18px;
   --font-monserrat: "Monserrat", sans-serif;
   --font-roboto: "Roboto", sans-serif;
