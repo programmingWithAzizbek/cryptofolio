@@ -7,11 +7,17 @@ import "swiper/css/navigation";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Pagination from "@mui/material/Pagination";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
   const [data, setData] = useState([]);
 
   const [page, setPage] = useState(1);
+
+  let navigate = useNavigate();
+  function save(id) {
+    navigate(`/details/${id}`);
+  }
 
   useEffect(() => {
     axios
@@ -146,8 +152,15 @@ function Home() {
                         ₹{value.atl_change_percentage.toFixed(2)}
                       </strong>
                     </div>
-                    <div className="max-w-[260px] w-full flex justify-end pr-10 items-center gap-x-4 border-b border-hr">
-                      <img src={greenEye} alt="" />
+                    <div className="max-w-[260px] w-full flex justify-start pl-32 items-center gap-x-4 border-b border-hr">
+                      <button
+                        onClick={() => {
+                          save(value.id);
+                        }}
+                        className="cursor-pointer"
+                      >
+                        <img src={greenEye} alt="" />
+                      </button>
                       <strong
                         className={
                           value.market_cap_change_percentage_24h < 0
